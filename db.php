@@ -3,7 +3,7 @@
 $host = 'sql201.infinityfree.com';      // Usually 'localhost' when using phpMyAdmin locally
 $dbname = 'if0_39057357_twentyfirstvisual'; // Change this to your actual database name
 $username = 'if0_39057357';        // Default username for localhost
-$password = 'HZSzN5CNp9dqZ';            // Default password for localhost (often empty)
+$password = 'localhost';            // Default password for localhost (often empty)
 
 // Create connection
 $conn = new mysqli($host, $username, $password, $dbname);
