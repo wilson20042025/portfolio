@@ -1,0 +1,218 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+    background: url('images/hero-bg.jpg') center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(75, 75, 75, 0.6);
+    background-image: url('images/hero-bg.jpg') center/cover no-repeat;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-explore {
+    background-color: #ff5e5e;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-explore:hover {
+    background-color: #e74c3c;
+}
+
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem 1rem;
+    background-color: #f8f8f8;
+}
+
+.highlight {
+    flex: 1 1 300px;
+    margin: 1rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.highlight h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.highlight p {
+    color: #ededed;
+}
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.highlight {
+    background-color: var(--input-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.highlight:hover {
+    transform: translateY(-4px);
+}
+
+.highlight img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.highlight h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.highlight p {
+    color: var(--text-color-light);
+}
+/* Theme variables */
+:root {
+    --background-color: #ffffff;
+    --text-color: #111111;
+    --text-color-light: #555;
+    --input-bg: #fff;
+}
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --text-color-light: #cccccc;
+    --input-bg: #1e1e1e;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Navigation styling */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--background-color);
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+/* Burger Menu */
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--background-color);
+        flex-direction: column;
+        width: 200px;
+        padding: 1rem;
+        display: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}

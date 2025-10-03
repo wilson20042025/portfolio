@@ -1,0 +1,145 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-page {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Gallery Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* No Images Found */
+.no-images {
+    text-align: center;
+    color: #888;
+    font-size: 1.2rem;
+}
+
+/* Lightbox Styling */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    object-fit: contain;
+    z-index: 2;
+}
+
+/* Lightbox Controls (Close, Prev, Next) */
+.lightbox span {
+    position: absolute;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px 12px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    z-index: 3;
+}
+
+.lightbox span:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.close-lightbox {
+    top: 20px;
+    right: 20px;
+}
+
+.prev-slide {
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+}
+
+.next-slide {
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .lightbox span {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+
+    .lightbox img {
+        max-width: 100%;
+        max-height: 70%;
+    }
+}
+
+/* Filter Buttons */
+.gallery-filters {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.filter-button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.filter-button.active,
+.filter-button:hover {
+    background: #333;
+    color: #fff;
+}

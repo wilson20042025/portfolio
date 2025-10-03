@@ -1,0 +1,141 @@
+/* General Layout */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* Container for login and dashboard */
+.login-container, .dashboard-container {
+  max-width: 450px;
+  margin: 80px auto;
+  padding: 30px 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container {
+  max-width: 900px;
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  color: #0077cc;
+}
+
+/* Form Elements */
+form label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #444;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+button, .btn {
+  margin-top: 25px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: #005fa3;
+}
+
+/* Logout link */
+.logout-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Error & success messages */
+.error-msg {
+  background-color: #ffe6e6;
+  color: #a94442;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 15px;
+  border: 1px solid #f5c6cb;
+  font-weight: bold;
+}
+
+.upload-message.success {
+  background-color: #e6ffea;
+  color: #2e7d32;
+  border: 1px solid #c3e6cb;
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Image Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+thead th {
+  background-color: #0077cc;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f0f7ff;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .login-container, .dashboard-container {
+    padding: 20px;
+    margin: 40px auto;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  td {
+    padding: 10px;
+    position: relative;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+}
