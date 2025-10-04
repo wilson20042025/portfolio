@@ -1,9 +1,10 @@
 <?php
-// Database configuration
-$host = 'sql201.infinityfree.com';      // Usually 'localhost' when using phpMyAdmin locally
-$dbname = 'if0_39057357_twentyfirstvisual'; // Change this to your actual database name
-$username = 'if0_39057357';        // Default username for localhost
-$password = 'localhost';            // Default password for localhost (often empty)
+$config = include(__DIR__ . '/../private/config.php');
+    // Database configuration
+    $host = $config['host'];
+    $dbname = $config['dbname'];
+    $username = $config['username'];
+    $password = $config['password'];
 
 // Create connection
 $conn = new mysqli($host, $username, $password, $dbname);
