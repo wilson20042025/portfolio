@@ -1,6 +1,6 @@
 <?php
-// Load credentials from the private config file
-$config = include(__DIR__ . '/../../config.php');
+// Database configuration
+$config = include(__DIR__ . '/config.php');
 
 $host = $config['host'];
 $dbname = $config['dbname'];
