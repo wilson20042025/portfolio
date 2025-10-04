@@ -19,7 +19,7 @@
 <section class="highlights">
     <div class="highlight">
         <img src="https://res.cloudinary.com/diqqmnnkv/image/upload/v1748086188/DSC_1661_a1u7vp.jpg" alt="Portrait photography">
-        <h2>Portrait</h2>
+        <h2 >Portrait</h2>
         <p>Rare and raw emotions</p>
     </div>
 

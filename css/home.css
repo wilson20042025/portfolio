@@ -66,13 +66,14 @@ body {
 }
 
 .highlight h2 {
-    color: #333;
+    color: #ffffff;
     margin-bottom: 0.5rem;
 }
 
 .highlight p {
     color: #ededed;
 }
+
 .highlights {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -85,7 +86,7 @@ body {
 .highlight {
     background-color: var(--input-bg);
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     text-align: center;
     padding: 1rem;
@@ -121,12 +122,14 @@ body {
     height: 100%;
     overflow: hidden;
     z-index: 0;
-    opacity: 0.7; /* Low opacity */
+    opacity: 0.7;
+    /* Low opacity */
 }
 
 .slide-track {
     display: flex;
-    width: 200%; /* Because we have 2 images */
+    width: 200%;
+    /* Because we have 2 images */
     height: 100%;
     animation: scrollBackground 10s linear infinite;
 }
@@ -135,12 +138,17 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-     filter: blur(10px);
+    filter: blur(10px);
 }
-    
+
 @keyframes scrollBackground {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 
@@ -159,7 +167,6 @@ body {
     position: relative;
     z-index: 2;
     padding: 2rem;
-    backdrop-filter: blur(2px); /* Optional for better readability */
+    backdrop-filter: blur(2px);
+    /* Optional for better readability */
 }
-
-
