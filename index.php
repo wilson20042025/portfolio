@@ -20,7 +20,7 @@
     <div class="highlight">
         <img src="https://res.cloudinary.com/diqqmnnkv/image/upload/v1748086188/DSC_1661_a1u7vp.jpg" alt="Portrait photography">
         <h2>Portrait</h2>
-        <p>Rare and raw emotions.</p>
+        <p>Rare and raw emotions</p>
     </div>
 
     <div class="highlight">
@@ -32,7 +32,7 @@
     <div class="highlight">
         <img src="https://res.cloudinary.com/diqqmnnkv/image/upload/v1748031604/comp3_ykmpnk.jpg" alt="Event photography">
         <h2>Events</h2>
-        <p>Unforgettable memories captured.</p>
+        <p>Unforgettable memories captured</p>
     </div>
 </section>
 
