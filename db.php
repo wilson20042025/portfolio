@@ -1,10 +1,11 @@
 <?php
-$config = include(__DIR__ . '/../private/config.php');
-    // Database configuration
-    $host = $config['host'];
-    $dbname = $config['dbname'];
-    $username = $config['username'];
-    $password = $config['password'];
+// Load credentials from the private config file
+$config = include(__DIR__ . '/../../config.php');
+
+$host = $config['host'];
+$dbname = $config['dbname'];
+$username = $config['username'];
+$password = $config['password'];
 
 // Create connection
 $conn = new mysqli($host, $username, $password, $dbname);
