@@ -3,28 +3,21 @@ name: Deploy to InfinityFree
 on:
   push:
     branches:
-      - main  # or 'master' if that’s your default branch
+      - main   # Only deploy when pushing to main
 
 jobs:
   ftp-deploy:
-    name: FTP Deploy
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Upload files to InfinityFree
+      - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_HOST }}
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
-          protocol: ftp
-          server-dir: ${{ secrets.FTP_PATH }}
-          local-dir: .
-          exclude: |
-            **/.git*
-            **/.github*
-            **/node_modules/*
+          server-dir: htdocs/
+          delete: false
