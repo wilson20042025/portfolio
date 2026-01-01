@@ -3,12 +3,12 @@
 
 <main class="gallery-page">
 
-    <section class="gallery-filters">
+    <!-- <section class="gallery-filters">
         <button class="filter-button active" data-category="all">All</button>
         <button class="filter-button" data-category="Portrait">Portrait</button>
         <button class="filter-button" data-category="Nature">Nature</button>
         <button class="filter-button" data-category="Events">Events</button>
-    </section>
+    </section> -->
 
     <section class="gallery-grid">
         <?php
